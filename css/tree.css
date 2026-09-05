@@ -1,0 +1,43 @@
+ul.tree {
+    border: 0 solid red;
+    padding-left: 0;
+    margin: 0;
+    padding: 0;
+}
+ul.tree ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+ul.tree li {
+    list-style: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+ul.tree li.folder {
+    background-image: url('../image/folder.png');
+    background-repeat: no-repeat;
+}
+ul.tree li.open {
+    background-image: url('../image/folder-open.png');
+}
+ul.tree li {
+    background: url('../image/rss-gray.png') 0 1px no-repeat;
+    padding-left: 20px;
+}
+ul.tree li.folder {
+    padding-left: 20px;
+}
+ul.tree li:not(.folder):hover {
+    background-color: skyblue;
+    background-color: rgba(0,0,0,0.3);
+}
+ul.tree li.active {
+    /* outline: 1px solid skyblue; */
+    color: blue;
+}
+ul.tree li.active:hover {
+    /* outline: 1px solid skyblue; */
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- link rel="stylesheet" href="css/settings.css" type="text/css" -->
+  </head>
+  <body>
+
+    <h1>Settings</h1>
+
+    <div style="margin-bottom: 1ex;">
+        <label>Tree width</label>
+        <input id="tree_width" type="text" size="5" />
+    </div>
+
+    <div style="margin-bottom: 1ex;">
+        <label>Tree font</label>
+        <input id="tree_font_size" type="number" size="3" min="1" max="100" step="1" />
+        <label id="tree_font_size_label">px</label>
+        <select id="tree_font_name">
+            <option></option>
+            <option>serif</option>
+            <option>sans-serif</option>
+            <option>monospace</option>
+        </select>
+        <span id="tree_font_test" class="localize">Test: Quick brown fox jumped over the lazy dog</span>
+    </div>
+
+
+    <h1>Clear data</h1>
+
+    <div>
+        <div><label><input id="clear_data" type="checkbox" checked />Items data<span id="clear_data_size"></span></label></div>
+        <div><label><input id="clear_state" type="checkbox" />Read/unread state<span id="clear_state_size"></span></label></div>
+        <div style="display: block;"><label><input id="clear_tree" type="checkbox"/>Feeds tree<span id="clear_tree_size"></span></label></div>
+        <div><button id="clear">Clear</button></div>
+    </div>
+
+    <h1>Export</h1>
+
+    <div>
+        <button id="export">Export</button>
+        <button id="ebook">Export ebook</button>
+    </div>
+
+    <h1>Import</h1>
+
+    <div>
+        <button id="import">Import</button>
+    </div>
+
+    <script type="text/javascript" src="depend/rough_size.js"></script>
+    <script type="text/javascript" src="depend/dh/htmlsanitizer.js"></script>
+    <script type="text/javascript" src="depend/dh/sha1.js"></script>
+    <script type="text/javascript" src="depend/sc/choose_files.js"></script>
+    <script type="text/javascript" src="depend/sc/download.js"></script>
+
+    <script type="text/javascript" src="js/initial.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/read.js"></script>
+    <script type="text/javascript" src="js/rss.js"></script>
+    <script type="text/javascript" src="js/sanitize.js"></script>
+    <script type="text/javascript" src="js/ebook.js"></script>
+  </body>
+</html>

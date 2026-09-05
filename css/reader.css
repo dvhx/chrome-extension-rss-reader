@@ -1,0 +1,183 @@
+body {
+    font-family: sans, "DejaVu Sans";
+    font-size: 100%;
+}
+
+button, select, input {
+    padding: 5px;
+    opacity: 0.8;
+    font-weight: bold;
+    color: black;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: hand;
+}
+
+input, select {
+    background-color: transparent;
+}
+
+input:disabled, select:disabled {
+    color: gray;
+}
+
+button:hover, select:hover, input:hover {
+    opacity: 1.0;
+}
+
+button.red {
+    color: white;
+    background-color: #e44234;
+    border: 1px solid #e44234;
+}
+
+#tree-container {
+    float: left;
+    margin-right: 1ex;
+    width: 300px;
+}
+
+#tree-controls {
+    margin-bottom: 1ex;
+}
+
+#subscribe {
+}
+
+#main {
+}
+
+#main h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#main_heading {
+    float: right;
+    font-weight: bold;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+#main_heading_controls {
+    margin-bottom: 1ex;
+}
+
+#main_heading_controls span.separator {
+    display: inline-block;
+    width: 1ex;
+}
+
+#refresh_interval {
+    width: 6ex;
+    margin-right: 2px;
+}
+
+.folder-select {
+}
+
+#edit_url {
+}
+
+#main_content {
+    margin-left: 300px;
+    border-left: 0 solid red;
+}
+#main_footer {
+    padding-left: 1ex;
+}
+
+#meter {
+    opacity: 0;
+}
+
+#meter.show {
+    opacity: 1;
+}
+
+#meter.hide {
+    transition: opacity 1s linear 1s;
+    opacity: 0;
+}
+
+/* item */
+
+.rss_feed_item {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #ccc;
+    padding: 1ex;
+    margin: 1ex;
+}
+
+.rss_feed_item h2.control {
+    padding: 0;
+    margin: 0;
+    font-size: medium;
+}
+
+.rss_feed_item h3.control {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1ex;
+    font-size: small;
+    color: gray;
+}
+
+.rss_feed_item a.control {
+    text-decoration: none;
+    color: black;
+}
+
+.rss_feed_item a.control:hover, .item a.control:hover h3.control {
+    color: blue;
+    text-decoration: none;
+}
+
+.rss_feed_item p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1ex;
+}
+
+.rss_feed_item label {
+    color: inherit;
+}
+
+.rss_feed_item input[type="checkbox"] {
+    vertical-align: middle;
+}
+
+.rss_feed_item .ball {
+    color: silver;
+    text-decoration: none;
+    border-radius: 0.5em;
+    width: 1em;
+    height: 1em;
+    margin-left: 0.2em;
+    font-size: small;
+    text-align: center;
+}
+.rss_feed_item .ball:hover {
+    color: white;
+    background-color: silver;
+}
+
+.rss_feed_item .info {
+    cursor: pointer;
+    float: right;
+}
+
+.rss_feed_item .feedlink {
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+}
+
+.rss_feed_item .xmllink {
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+}
+

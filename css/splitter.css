@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+}
+
+.splitter-right {
+    float: right;
+    margin: 0;
+    padding: 0;
+    cursor: ew-resize;
+    width: 5px;
+    height: 95%;
+    background-color: #eee;
+    opacity: 0.8;
+}
+.splitter-right:hover {
+    opacity: 1.0;
+    background-color: skyblue;
+}

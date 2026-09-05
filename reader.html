@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RSS Reader</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/tree.css" type="text/css">
+    <link rel="stylesheet" href="css/splitter.css" type="text/css">
+    <link rel="stylesheet" href="css/reader.css" type="text/css">
+  </head>
+  <body>
+
+    <div id="tree-container">
+
+        <div id="splitter" class="splitter-right"></div>
+
+        <div id="tree-controls">
+            <!-- button id="refresh_all" title="Refresh all">Refresh</button -->
+            <button id="add_new_feed" title="Add new feed">Subscribe</button>
+            <button id="add_new_folder" title="Add new folder" class="gray">New folder</button>
+        </div>
+
+        <ul id="tree" class="tree"></ul>
+
+    </div>
+
+    <div id="main">
+        <span id="main_heading"></span>
+
+        <div id="main_heading_controls">
+            <button id="refresh_current" title="Refresh current (hold shift to force refresh, hold ctrl to custom interval)">Refresh</button>
+            <select id="mode" title="Show">
+                <option value="unread" selected>Unread items</option>
+                <option value="all">All items</option>
+            </select>
+            <button id="mark_all_as_read">Mark all as read</button>
+            <button id="show_extra">Edit</button>
+            <button id="remove_sel" title="Remove selected" disabled>Unsubscribe</button>
+            <span id="last_update">Last update: never</span>
+            <meter id="meter" value="0" max="3"></meter>
+            <!-- span class="separator"></span -->
+            <div id="extra" style="display: none; margin-top: 1ex;">
+                Move to
+                <select id="folder_select" title="Move to folder..."></select>
+                <button id="edit_text" title="Edit feed label" disabled>Rename</button>
+                <button id="edit_url" title="Edit URL" disabled>Change URL</button>
+                Interval <input id="refresh_interval" type="number" title="Refresh interval in hours" value="2" min="1" step="1" max="99" />h
+            </div>
+        </div>
+
+        <div id="main_content"></div>
+
+        <div id="main_footer"></div>
+    </div>
+
+  <script type="text/javascript" src="depend/dh/htmlsanitizer.js"></script>
+  <script type="text/javascript" src="depend/dh/sha1.js"></script>
+  <script type="text/javascript" src="depend/dc_sha256.js"></script>
+
+  <script type="text/javascript" src="js/initial.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+  <script type="text/javascript" src="js/date.js"></script>
+  <script type="text/javascript" src="js/receive.js"></script>
+  <script type="text/javascript" src="js/rss.js"></script>
+  <script type="text/javascript" src="js/rss_atom.js"></script>
+  <script type="text/javascript" src="js/rss_rdf.js"></script>
+  <script type="text/javascript" src="js/rss_sme_sk.js"></script>
+  <script type="text/javascript" src="js/rss_twitter_com.js"></script>
+  <script type="text/javascript" src="js/rss_none.js"></script>
+  <script type="text/javascript" src="js/sanitize.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
+  <script type="text/javascript" src="js/config.js"></script>
+  <script type="text/javascript" src="js/splitter.js"></script>
+  <script type="text/javascript" src="js/tree.js"></script>
+  <script type="text/javascript" src="js/render.js"></script>
+  <script type="text/javascript" src="js/reader.js"></script>
+  <script type="text/javascript" src="js/read.js"></script>
+
+  </body>
+</html>
