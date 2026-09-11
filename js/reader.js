@@ -78,8 +78,8 @@ RR.readerPage.onAddNewFeed = function () {
         parent = RR.readerPage.activeItem;
     }
     // ask for url
-    url = prompt('Add new feed to "' + parent.text + '"', 'https://').trim();
-    if (url) {
+    url = prompt('Add new feed to "' + parent.text + '"', 'https://');
+    if (url && url.trim()) {
         // convert url of youtube channel to rss feed
         if (url.match(/https:\/\/www\.youtube\.com\/channel\/[a-zA-Z0-9_\-]+/)) {
             if (confirm('This looks like youtube channel (html page). Would you like to use RSS of this youtube channel instead?')) {
