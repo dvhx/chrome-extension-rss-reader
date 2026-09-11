@@ -20,7 +20,8 @@
     "permissions": [
     ],
     "host_permissions": [
-        "<all_urls>"
+        "https://*/*",
+        "http://*/*"
     ],
     "version": "0.1.75"
 }
