@@ -18,7 +18,6 @@
     "short_name": "RSS Reader",
     "options_page": "settings.html",
     "permissions": [
-        "tabs"
     ],
     "host_permissions": [
         "<all_urls>"

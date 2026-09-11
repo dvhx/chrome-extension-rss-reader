@@ -3,28 +3,21 @@
 // global: chrome
 "use strict";
 
-function openOrFocusExtensionPage(pagePath) {
-    const fullUrl = chrome.runtime.getURL(pagePath);
-    //console.log(fullUrl);
-    chrome.tabs.query({
-        url: fullUrl + '*'
-    }, (tabs) => {
-        //console.log(tabs);
-        if (tabs.length > 0) {
-            chrome.tabs.update(tabs[0].id, {
-                active: true
-            });
-            chrome.windows.update(tabs[0].windowId, {
-                focused: true
-            });
-        } else {
-            chrome.tabs.create({
-                url: pagePath
-            });
-        }
-    });
-}
+let myPageTabId = null;
 
-chrome.action.onClicked.addListener(() => {
-    openOrFocusExtensionPage('reader.html');
+chrome.action.onClicked.addListener(async () => {
+    if (myPageTabId !== null) {
+        try {
+          await chrome.tabs.update(myPageTabId, { active: true });
+          const tab = await chrome.tabs.get(myPageTabId);
+          await chrome.windows.update(tab.windowId, { focused: true });
+          return;
+        } catch (e) {
+          myPageTabId = null;
+        }
+    }
+    const tab = await chrome.tabs.create({
+        url: chrome.runtime.getURL("reader.html")
+    });
+    myPageTabId = tab.id;
 });
